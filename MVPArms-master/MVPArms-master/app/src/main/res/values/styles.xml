@@ -1,0 +1,95 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="Look.Home">
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/immersive_bars</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/immersive_bars</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowEnterTransition" tools:targetApi="lollipop">@transition/home_enter</item>
+
+    </style>
+
+    <style name="Look" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary" tools:targetApi="lollipop">@color/primary</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:colorAccent" tools:targetApi="lollipop">@color/accent</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/primary_super_dark</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/background_super_dark</item>
+        <item name="android:textColorHint">@color/hint_disabled_dark</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <item name="android:windowSharedElementsUseOverlay" tools:targetApi="lollipop">false</item>
+    </style>
+
+    <style name="Widget.Look.Toolbar.SmallCapsTitle">
+        <item name="android:titleTextAppearance" tools:targetApi="lollipop">@style/TextAppearance.ToolbarTitleSmallCaps</item>
+    </style>
+
+    <style name="Widget.Look.HomeToolbar" parent="Widget.Look.Toolbar.SmallCapsTitle">
+        <item name="android:background">@null</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="android:theme" tools:targetApi="lollipop">@android:style/ThemeOverlay.Material.Dark</item>
+    </style>
+
+    <style name="Widget.Look.Toolbar">
+        <item name="android:titleTextAppearance" tools:targetApi="lollipop">
+            @android:style/TextAppearance.Material.Widget.ActionBar.Title
+        </item>
+        <item name="android:background">?android:colorPrimary</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/z_app_bar</item>
+        <item name="android:theme">@style/PlaidDarkOverlay</item>
+    </style>
+
+    <style name="PlaidDarkOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar"  tools:targetApi="lollipop">
+        <!-- Used to theme dark elements in light themed screens.
+             Extend the material dark Action Bar overlay as this contains text styling. -->
+    </style>
+
+
+    <style name="Widget.Look" parent="android:Widget" />
+
+    <style name="TextAppearance.ToolbarTitleSmallCaps" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" tools:targetApi="lollipop">
+        <item name="android:textColor">@color/text_primary_light</item>
+        <item name="android:fontFeatureSettings" tools:targetApi="lollipop">smcp</item>
+        <item name="android:letterSpacing" tools:targetApi="lollipop">0.2</item>
+    </style>
+
+    <style name="Look.Translucent">
+        <item name="android:windowBackground">@color/scrim</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+    </style>
+
+    <style name="Look.Translucent.Look">
+        <item name="android:colorPrimary" tools:targetApi="lollipop">@color/dribbble</item>
+        <item name="android:colorAccent" tools:targetApi="lollipop">@color/dribbble</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/dribbble_super_dark</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/dribbble_super_dark</item>
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">?android:colorAccent</item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">false</item>
+    </style>
+
+    <style name="Look.Translucent.Look.Image">
+        <item name="android:windowSharedElementEnterTransition" tools:targetApi="lollipop">@transition/dribbble_shot_shared_enter</item>
+        <item name="android:windowSharedElementReturnTransition" tools:targetApi="lollipop">@transition/dribbble_shot_shared_return</item>
+        <item name="android:windowEnterTransition" tools:targetApi="lollipop">@transition/dribbble_shot_enter</item>
+        <item name="android:windowReturnTransition" tools:targetApi="lollipop">@transition/dribbble_shot_return</item>
+    </style>
+</resources>

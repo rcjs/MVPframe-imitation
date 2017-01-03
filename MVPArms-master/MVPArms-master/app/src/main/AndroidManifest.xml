@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="me.jessyan.mvparms.demo">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:name=".app.WEApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".mvp.ui.activity.UserActivity">
+        <!--    <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".mvp.ui.activity.AboutActivity"
+            android:parentActivityName=".mvp.ui.activity.MainActivity"
+            android:theme="@style/Look.Translucent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mvp.ui.activity.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".mvp.ui.activity.ZhihuDescribeActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mvp.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Look.Translucent.Look.Image">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mvp.ui.activity.MainActivity"/>
+        </activity>
+
+        <activity android:name=".mvp.ui.activity.MainActivity"   android:screenOrientation="portrait"
+            android:theme="@style/Look.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".mvp.ui.activity.MeiziPhotoDescribeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Look.Home"/>
+
+        <activity
+            android:name=".mvp.ui.activity.TopNewsDescribeActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mvp.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/Look.Translucent.Look.Image">
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".mvp.ui.activity.MainActivity"/>
+        </activity>
+
+        <!-- autolayout meta
+        将设计图的宽高配置后,配合AutoLauout控件使用,在设计图尺寸以外的其它尺寸手机上,也能达到和设计图一样的效果
+        -->
+        <meta-data
+            android:name="design_width"
+            android:value="1080"/>
+        <meta-data
+            android:name="design_height"
+            android:value="1920"/>
+        <!--glide配置-->
+        <meta-data
+            android:name="com.jess.arms.widget.imageloader.glide.GlideConfiguration"
+            android:value="GlideModule"/>
+
+    </application>
+
+</manifest>
